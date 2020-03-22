@@ -86,20 +86,24 @@ if savings_annual > 0:
     print("\nGood job on saving up some money!")
 else:
     print("Saving can be hard. Setting aside a couple dollars each month would be a great start.\n")
+
 ##Define function which calculates savings
 def calculate_savings(annual):
     monthly_s=int(annual/12)
     while annual <= 120:
         annual=int(input("You can do better than that! Try again, and have faith in yourself! :"))
     return monthly_s
+
 ##Define function which calls to calculate_savings function
 def main():
     savings_wanted=int(input("\nHow much would more you like to save over the next year? "))
     savings_needed=calculate_savings(savings_wanted)
     print("To save that much, you need to save an average of $" + format(savings_needed, ".2f")+ " each month.")
 print("Whether you've saved or not, now is the time to make further effort--it's never too late.")
+
 ##Call to main function
 main()
+
 print("\nYou've said that you're paying $"+str(retirement)+" toward a retirement plan each year.")
 if retirement > 0:
     print("Great job preparing for the future!")
